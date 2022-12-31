@@ -53,6 +53,11 @@ sudo /opt/can-utils/slcan_attach -f -s1 -b 11 -o /dev/ttyACM0
 sudo /opt/can-utils/slcand ttyACM0 slcan0
 sudo ifconfig slcan0 up
 ```
+If you are using can instead of serial can:
+```
+sudo ip link set can0 type can bitrate 20000
+sudo ifconfig can0 up
+```
 
 To add this to autostart and setup the adapter on every reboot, run 'sudo nano /etc/rc.local'
 Paste the three lines above at the end before the "EXIT 0".
