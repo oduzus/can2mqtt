@@ -153,6 +153,7 @@ Edit the config.json with your favorite editor (i.e. nano): 'sudo nano /opt/can2
   "CanForwardResponse": true,		< This defines if can2mqtt will handle CAN bus packages, that have the "response" flag
   "CanReceiveBufferSize": 48,		< The buffer size of receiving commands. 48 is default.
   "CanSenderId":"6A2",				< The ID can2mqtt will use at the CAN bus in case of writing to the CAN bus
+  "CanInterface" :"slcan0", <The interface used to connect to the Bus e.g: slcan0 or can0
 
   "MqttServer": "192.168.0.10",		< This is the IP of the MQTT Broker
   "MqttClientId": "Can2Mqtt",		< This is the ID the MQTT Client will use when register at MQTT Broker
